@@ -1,0 +1,16 @@
+secom:
+  archive_url: "https://archive.ics.uci.edu/static/public/179/secom.zip"
+  missingness_threshold: 0.50
+  random_state: 20261010
+  test_size: 0.25
+  selected_feature_count: 25
+doe:
+  random_state: 20261010
+  center_point_replicates: 4
+  factors:
+    pressure_mTorr: [20.0, 60.0]
+    rf_power_W: [300.0, 700.0]
+    gas_flow_sccm: [30.0, 70.0]
+  illustrative_acceptance_window:
+    etch_rate_nm_min: [85.0, 125.0]
+    uniformity_percent_max: 7.0
