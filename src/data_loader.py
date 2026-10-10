@@ -73,7 +73,7 @@ def validate_secom(features: pd.DataFrame, labels: pd.DataFrame) -> dict[str, ob
         "n_features": features.shape[1],
         "n_labels": len(labels),
         "row_alignment": len(features) == len(labels),
-        "observed_labels": sorted(values),
+        "observed_labels": [int(value) for value in sorted(values)],
         "timestamp_parse_rate": float(labels["timestamp"].notna().mean()),
         "feature_columns": list(features.columns),
     }
